@@ -21,6 +21,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="NVW-qo-FiV" kind="show" id="quM-jW-crV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -33,6 +36,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bd6-jl-nPr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1003.5" y="64"/>
+        </scene>
+        <!--City View Controller-->
+        <scene sceneID="zyL-LQ-gLf">
+            <objects>
+                <viewController id="NVW-qo-FiV" customClass="CityViewController" customModule="TableViewSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y4E-3K-qXF"/>
+                        <viewControllerLayoutGuide type="bottom" id="vh0-uh-1Hd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LXz-oa-Ufi">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bIk-wp-GND" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1740" y="63"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BUU-zs-DZK">

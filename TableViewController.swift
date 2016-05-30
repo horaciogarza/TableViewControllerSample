@@ -16,9 +16,11 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        cities.append(["Mexico City", "CODIGOAQUI"])
-        cities.append(["Ottawa", "CODIGOAQUI"])
-        cities.append(["São Pãolo", "CODIGOAQUI"])
+        
+        self.title = "Weather"
+        cities.append(["Mexico City", "MXDF0132"])
+        cities.append(["Ottawa", "CANS1482"])
+        cities.append(["São Pãulo", "BRXX0232"])
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -44,15 +46,16 @@ class TableViewController: UITableViewController {
         return self.cities.count
     }
 
-    /*
+    
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("Celda", forIndexPath: indexPath)
 
         // Configure the cell...
+        cell.textLabel?.text = self.cities[indexPath.row][0]
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -89,14 +92,18 @@ class TableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+    
+        let cc = segue.destinationViewController as! CityViewController
+        let ip = self.tableView.indexPathForSelectedRow
+        cc.code = self.cities[ip!.row][1]
     }
-    */
+    
 
 }
